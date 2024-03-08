@@ -1,0 +1,134 @@
+:root {
+    --house-top: #f8b600;
+    --house-body: #eee;
+    --house-bottom: #333;
+    --window-color: #f99500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.area {
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(
+        circle closest-side at 15% 15%,
+        yellow 50%,
+        #fd0 20%,
+        #aff
+    );
+}
+
+.top {
+    height: 0;
+    width: 0;
+    border-left: 35vw solid transparent;
+    border-right: 35vw solid transparent;
+    border-bottom: 20vh solid var(--house-top);
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+
+
+.middle {
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    background-color: var(--house-body);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.window {
+    height: 25%;
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--window-color);
+}
+
+.inner-window {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #aaa;
+}
+
+.window1 {
+    height: 100%;
+    width: 5%;
+    background-color: #333;
+}
+
+.door {
+    height: 80%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f99500;
+}
+
+.door-bar {
+    height: 80%;
+    width: 60%;
+    background-color: #f8b600;
+}
+
+.bottom {
+    height: 5vh;
+    width: 60vw;
+    display: block;
+    background-color: var(--house-bottom);
+}
+
+@media (max-width: 1000px) {
+    .area {
+        background: radial-gradient(
+        circle closest-side at 15% 15%,
+        #eee 50%,
+        #aaa 20%,
+        #222
+    );
+    }
+
+    .top {
+        border-bottom-color: #f8b422d0;
+    }
+
+    .window {
+        background: linear-gradient(#f99500, #fd2);
+    }
+
+    .inner-window {
+        background-color: #fd0;
+    }
+
+    .middle {
+        background-color: #aaa;
+    }
+
+    .door {
+        background-color: #f99500a9;
+    }
+
+    .door-bar {
+        background-color: #f8b600a9;
+    }
+}
